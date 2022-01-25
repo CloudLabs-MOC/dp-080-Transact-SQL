@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Create queries with table expressions'
-    module: 'Additional exercises'
----
-
 # Create queries with table expressions
 
 In this lab, you'll use table expressions to query the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
