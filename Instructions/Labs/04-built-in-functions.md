@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Use Built-in Functions'
-    module: 'Module 4: Using Built-in Functions'
----
-
 # Use Built-in Functions
 
 In this lab, you'll use built-in functions to retrieve and aggregate data in the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
