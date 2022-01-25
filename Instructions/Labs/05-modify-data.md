@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Modify Data'
-    module: 'Module 5: Modifying Data'
----
-
 # Modify Data
 
 In this lab, you'll insert, update, and delete data in the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
