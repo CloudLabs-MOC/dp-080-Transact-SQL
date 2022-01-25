@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Use pivoting and grouping sets'
-    module: 'Additional exercises'
----
-
 # Use pivoting and grouping sets
 
 In this lab, you'll use pivoting and grouping sets to query the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
