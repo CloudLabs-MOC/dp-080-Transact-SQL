@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Get Started with Transact-SQL'
-    module: 'Module 1: Getting Started with Transact-SQL'
----
-
 # Get Started with Transact-SQL
 
 In this lab, you will use some basic SELECT queries to retrieve data from the **AdventureWorks** database.
