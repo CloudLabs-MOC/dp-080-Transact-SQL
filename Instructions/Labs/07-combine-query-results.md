@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Combine query results with set operators'
-    module: 'Additional exercises'
----
 # Combine query results with set operators
 
 In this lab, you will use set operators to retrieve results from the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
