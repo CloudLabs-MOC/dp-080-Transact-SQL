@@ -1,8 +1,3 @@
----
-lab:
-    title: 'Use window functions'
-    module: 'Additional exercises'
----
 # Use window functions
 
 In this lab, you'll run window functions on the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
