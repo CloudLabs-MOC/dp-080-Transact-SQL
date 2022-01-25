@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Implement transactions with Transact SQL'
-    module: 'Additional exercises'
----
-
 # Implement transactions with Transact SQL
 
 In this lab, you'll use T-SQL statements to see the impact of using transactions in the **AdventureWorks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
