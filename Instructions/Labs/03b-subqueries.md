@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Use Subqueries'
-    module: 'Module 3: Using Joins and Subqueries'
----
-
 # Use Subqueries
 
 In this lab, you'll use subqueries to retrieve data from tables in the **adventureworks** database. For your reference, the following diagram shows the tables in the database (you may need to resize the pane to see them clearly).
