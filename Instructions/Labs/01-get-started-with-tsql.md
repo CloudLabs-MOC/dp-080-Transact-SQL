@@ -10,7 +10,6 @@ In this lab, you will complete the following tasks:
 - Task 3: Work with data types
 - Task 4: Handle NULL values
 
-
 ## Task 1: Explore the *AdventureWorks* database
 
 We'll use the **AdventureWorks** database in this lab, so let's start by exploring it in Azure Data Studio.
