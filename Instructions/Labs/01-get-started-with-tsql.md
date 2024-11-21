@@ -15,16 +15,25 @@ In this lab, you will complete the following tasks:
 We'll use the **AdventureWorks** database in this lab, so let's start by exploring it in Azure Data Studio.
 
 1. Open the **Search bar(1)** in the left bottom corner and search for **Azure(2)**, click on **Azure Data Studio(3)**.
+
+    ![](../media/data-studio.png)
 1. In **Azure Data Studio**, click on the **Connections(1)** tab in left-top corner and click on **New Connection(2)**.
-1. Enter the following values and click on **Connect**.
+
+    ![](../media/new-connection.png)
+1. Enter the following values and click on **Connect(7)**.
     |Setting|Value|
     |---|---|
-    |Connection type| Microsoft SQL Server |
-    |Input type| Parameters |
-    |Server| labvm-<inject key="DeploymentID" enableCopy="false"/> |
-    |Authentication type| Windows Authentication|
-    |Database| AdventureWorks2017 |
-    |Trust server certificate| True |
+    |Connection type| **Microsoft SQL Server** (1)|
+    |Input type| **Parameters** (2)|
+    |Server| **labvm-<inject key="DeploymentID" enableCopy="false"/>** (3)|
+    |Authentication type| **Windows Authentication** (4)|
+    |Database| **AdventureWorks2017** (5)|
+    |Trust server certificate| **True** (6)|
+
+    ![](../media/input.png)
+    >**Note:** If you receive any pop-up regarding **Connection error**, click on **Enable Trust Server Certificate(1)**.
+
+    ![](../media/error.png)
 
 1. Start Azure Data Studio, and in the **Connections** tab, select the **AdventureWorks** connection by clicking on the arrow just to the left of the name. This will connect to the SQL Server instance and show the objects in the **AdventureWorks** database.
 1. Expand the **Tables** folder to see the tables that are defined in the database. Note that there are a few tables in the **dbo** schema, but most of the tables are defined in a schema named **SalesLT**.
@@ -42,7 +51,9 @@ We'll use the **AdventureWorks** database in this lab, so let's start by explori
 
 Now that you've had a chance to explore the **AdventureWorks** database, it's time to dig a little deeper into the product data it contains by querying the **Product** table.
 
-1. In Azure Data Studio, create a new query (you can do this from the **File** menu or on the *welcome* page).
+1. In Azure Data Studio, create a new query by clicking on **File** and then **New Querry**.
+
+    ![](../media/querry.png)
 2. In the new **SQLQuery_...** pane, ensure that the **AdventureWorks** database is selected at the top of the query pane. If not, use the **Connect** button to connect the query to the **AdventureWorks** saved connection.
 3. In the query editor, enter the following code:
 
