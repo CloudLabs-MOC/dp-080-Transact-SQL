@@ -9,60 +9,64 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/01-get-started-with-tsql.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/BeforeHOL.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/02-filter-sort.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/01-get-started-with-tsql.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/03a-joins.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/02-filter-sort.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/03b-subqueries.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/03a-joins.md",
         "Order": 5
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/04-built-in-functions.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/03b-subqueries.md",
         "Order": 6
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/05-modify-data.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/04-built-in-functions.md",
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/06-group-data.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/05-modify-data.md",
         "Order": 8
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/07-subqueries.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/06-group-data.md",
         "Order": 9
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/08-table-expressions.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/07-subqueries.md",
         "Order": 10
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/09-window-functions.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/08-table-expressions.md",
         "Order": 11
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/10-pivoting-and-grouping-sets.md",
-        "Order": 12 
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/09-window-functions.md",
+        "Order": 12
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/11-transact-sql-programming.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/10-pivoting-and-grouping-sets.md",
         "Order": 13
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/12-implementing-error-handling.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/11-transact-sql-programming.md",
         "Order": 14
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/13-implementing-transactions.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/12-implementing-error-handling.md",
         "Order": 15
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod/Instructions/Labs/13-implementing-transactions.md",
+        "Order": 16
       }
     ]
   }
