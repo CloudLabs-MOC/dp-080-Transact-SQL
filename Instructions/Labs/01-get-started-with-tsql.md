@@ -15,7 +15,17 @@ In this lab, you will complete the following tasks:
 We'll use the **AdventureWorks** database in this lab, so let's start by exploring it in Azure Data Studio.
 
 1. Open the **Search bar(1)** in the left bottom corner and search for **Azure(2)**, click on **Azure Data Studio(3)**.
-1. In Azure Data Studio
+1. In **Azure Data Studio**, click on the **Connections(1)** tab in left-top corner and click on **New Connection(2)**.
+1. Enter the following values and click on **Connect**.
+    |Setting|Value|
+    |---|---|
+    |Connection type| Microsoft SQL Server |
+    |Input type| Parameters |
+    |Server| labvm-<inject key="DeploymentID" enableCopy="false"/> |
+    |Authentication type| Windows Authentication|
+    |Database| AdventureWorks2017 |
+    |Trust server certificate| True |
+
 1. Start Azure Data Studio, and in the **Connections** tab, select the **AdventureWorks** connection by clicking on the arrow just to the left of the name. This will connect to the SQL Server instance and show the objects in the **AdventureWorks** database.
 1. Expand the **Tables** folder to see the tables that are defined in the database. Note that there are a few tables in the **dbo** schema, but most of the tables are defined in a schema named **SalesLT**.
 1. Expand the **SalesLT.Product** table and then expand its **Columns** folder to see the columns in this table. Each column has a name, a data type, an indication of whether it can contain *null* values, and in some cases an indication that the columns is used as a primary key (PK) or foreign key (FK).
