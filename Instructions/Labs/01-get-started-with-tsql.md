@@ -1,24 +1,35 @@
-# Get Started with Transact-SQL
+# Lab 01: Get Started with Transact-SQL
 
+### Estimated Duration: 40 minutes
 In this lab, you will use some basic SELECT queries to retrieve data from the **AdventureWorks** database.
 
-## Explore the *AdventureWorks* database
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Explore the *AdventureWorks* database
+- Task 2: Use SELECT queries to retrieve data
+- Task 3: Work with data types
+- Task 4: Handle NULL values
+
+
+## Task 1: Explore the *AdventureWorks* database
 
 We'll use the **AdventureWorks** database in this lab, so let's start by exploring it in Azure Data Studio.
 
+1. Open the **Search bar(1)** in the left bottom corner and search for **Azure(2)**, click on **Azure Data Studio(3)**.
+1. In Azure Data Studio
 1. Start Azure Data Studio, and in the **Connections** tab, select the **AdventureWorks** connection by clicking on the arrow just to the left of the name. This will connect to the SQL Server instance and show the objects in the **AdventureWorks** database.
-2. Expand the **Tables** folder to see the tables that are defined in the database. Note that there are a few tables in the **dbo** schema, but most of the tables are defined in a schema named **SalesLT**.
-3. Expand the **SalesLT.Product** table and then expand its **Columns** folder to see the columns in this table. Each column has a name, a data type, an indication of whether it can contain *null* values, and in some cases an indication that the columns is used as a primary key (PK) or foreign key (FK).
-4. Right-click the **SalesLT.Product** table and use the **Select Top 1000** option to create and run a new query script that retrieves the first 1000 rows from the table.
-5. Review the query results, which consist of 1000 rows - each row representing a product that is sold by the fictitious *Adventure Works Cycles* company.
-6. Close the **SQLQuery_1** pane that contains the query and its results.
-7. Explore the other tables in the database, which contain information about product details, customers, and sales orders. The tables are related through primary and foreign keys, as shown here (you may need to resize the pane to see them clearly):
+1. Expand the **Tables** folder to see the tables that are defined in the database. Note that there are a few tables in the **dbo** schema, but most of the tables are defined in a schema named **SalesLT**.
+1. Expand the **SalesLT.Product** table and then expand its **Columns** folder to see the columns in this table. Each column has a name, a data type, an indication of whether it can contain *null* values, and in some cases an indication that the columns is used as a primary key (PK) or foreign key (FK).
+1. Right-click the **SalesLT.Product** table and use the **Select Top 1000** option to create and run a new query script that retrieves the first 1000 rows from the table.
+1. Review the query results, which consist of 1000 rows - each row representing a product that is sold by the fictitious *Adventure Works Cycles* company.
+1. Close the **SQLQuery_1** pane that contains the query and its results.
+1. Explore the other tables in the database, which contain information about product details, customers, and sales orders. The tables are related through primary and foreign keys, as shown here (you may need to resize the pane to see them clearly):
 
     ![An entity relationship diagram of the AdventureWorks database](./images/adventureworks-erd.png)
 
 > **Note**: If you're familiar with the standard **AdventureWorks** sample database, you may notice that in this lab we are using a simplified version that makes it easier to focus on learning Transact-SQL syntax.
 
-## Use SELECT queries to retrieve data
+## Task 2: Use SELECT queries to retrieve data
 
 Now that you've had a chance to explore the **AdventureWorks** database, it's time to dig a little deeper into the product data it contains by querying the **Product** table.
 
@@ -64,7 +75,7 @@ Now that you've had a chance to explore the **AdventureWorks** database, it's ti
 
 12. Run the query, and note that the **+** operator in the calculated **ProductDetails** column is used to *concatenate* the **Color** and **Size** column values (with a literal comma between them). The behavior of this operator is determined by the data types of the columns - had they been numeric values, the **+** operator would have *added* them. Note also that some results are *NULL* - we'll explore NULL values later in this lab.
 
-## Work with data types
+## Task 3: Work with data types
 
 As you just saw, columns in a table are defined as specific data types, which affects the operations you can perform on them.
 
@@ -121,7 +132,7 @@ As you just saw, columns in a table are defined as specific data types, which af
 
 11. Run the query and note that the numeric **Size** values are converted successfully to integers, but that non-numeric sizes are returned as *NULL*.
 
-## Handle NULL values
+## Task 4: Handle NULL values
 
 We've seen some examples of queries that return *NULL* values. *NULL* is generally used to denote a value that is *unknown*. Note that this is not the same as saying the value is *none* - that would imply that you *know* that the value is zero or an empty string!
 
