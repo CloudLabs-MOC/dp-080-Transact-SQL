@@ -4,8 +4,6 @@
 
 ## Overview
 
-
-
 ## Objective
 
 ## Pre-requisites
