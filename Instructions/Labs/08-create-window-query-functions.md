@@ -31,6 +31,8 @@ Let's start by creating a query that uses a window function to return a ranking 
 
 1. Run the query and review the results. The product categories in the results have a rank number according to the number of items sold within each category. The rank is based on a descending order of sales (so the category with most items sold is 1, the category with the second most items sold is 2, and so on).
 
+    ![](../media/32.png)
+
     > **Tip**: Look closely at the results to see how rank is assigned to categories with the same number of sales.
 
 ## Aggregation function by partition
@@ -51,6 +53,7 @@ Now, let's create a query that returns each product with its category and list p
 
 1. Run the query and review the results. The OVER clause applies the average function to ListPrice, partitioning by category (in other words, it calculates the average list price for products in each category; so you can easily compare the price of an individual product to the average price of all products in the same category).
 
+    ![](../media/33.png)
 ## Challenges
 
 Now it's your turn to use window functions.

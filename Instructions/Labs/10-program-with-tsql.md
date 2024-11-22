@@ -146,6 +146,8 @@ So far, you've used variables that encapsulate a single value of a specific data
 
 1. Run the code, and view the results (the data in the table variable).
 
+    ![](../media/36.png)
+
 ## Write conditional logic
 
 Conditional logic is used to *branch* program execution flow based on specific conditions. The most common form of conditional logic is the IF..ELSE statement. Transact-SQL also supports a CASE statement.
@@ -190,6 +192,8 @@ Conditional logic is used to *branch* program execution flow based on specific c
     ```
 
 1. Run the code and review the results.
+
+    ![](../media/37.png)
 
     The IF..ELSE statement block checks a series of conditions, running the statements for the first one that is found to be true, or statement under the final ELSE block if no match is found.
 
@@ -294,6 +298,8 @@ Loops are used to perform logic iteratively, running the same code multiple time
     ```
 
 1. Run the code and review the results.
+
+    ![](../media/38.png)
 
     > **Note**: This code is designed to demonstrate how to use a loop. While loops can be useful, it can often be more efficient to use set-based operations to achieve similar results.
 
