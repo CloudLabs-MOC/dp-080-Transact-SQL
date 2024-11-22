@@ -49,6 +49,7 @@ You've created your view. Now you can use it. For example, you can use your view
     ```
 
 1. Run the query and review the results. You've queried your view and retrieved a list of any road bikes that have a **ListPrice** under 1000. Your query uses your view as a source for the data. This means your applications can use your view for specific searches like this, and won't need to query the underlying table to fetch the data they need.
+    ![](../media/28.png)
 
 ## Use a derived table
 
@@ -79,6 +80,7 @@ Sometimes you might end up having to rely on complex queries. You can use derive
 
 1. Run the code, which defines a derived table and fetches the **ProductID**, **Name**, and **ListPrice** of products that have a **PriceType** of *High* only. Your derived table enabled you to easily build on top of your initial query based on your additional criteria, without making the initial query any more complex.
 
+    ![](../media/29.png)
 ## Challenges
 
 Now it's your turn to use table expressions.
