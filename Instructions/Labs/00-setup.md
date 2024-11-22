@@ -40,8 +40,8 @@ In this task, you will learn how to use Azure portal to create a single database
     | Settings | Values |
     |  -- | -- |
     | Subscription | *Leave default subscription* |
-    | Resource group | Select the resource group name **ODL-AZ-305M04B-<inject key="DeploymentID" enableCopy="false"/>** from the dropdown list** |
-    | Database name | **adventureworkscontoso** |
+    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>** from the dropdown list** |
+    | Database name | **Adventureworks** |
    
     ![image](../media/lab4-1-1.png) 
 
@@ -53,7 +53,7 @@ In this task, you will learn how to use Azure portal to create a single database
 
     | Settings | Values |
     |  -- | -- |      
-    | Server name | **contososerv<inject key="DeploymentID" enableCopy="false"/>** |
+    | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/>** |
     | Location | **East US** |
     | Authentication method | **Use SQL authentication** |
     | Server admin login | **contosoadmin** |
@@ -66,16 +66,33 @@ In this task, you will learn how to use Azure portal to create a single database
 
     | Settings | Values |
     |  -- | -- |      
-    | Server name | **contososerv<inject key="DeploymentID" enableCopy="false"/>** |
     | Want to use SQL elastic pool? | **No** |    |
     | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 1 vCores, 32 GB storage, zone redundant disabled)** is selected  |
-    | Backup storage redundancy |  **Geo-redundant backup storage** |
+    | Backup storage redundancy |  **Local redundant storage** |
     
     ![image](../media/Nimage-41.png)
  
-7. On the **Networking** tab, review the default settings.
+7. On the **Networking** tab, modify the below settings as below
+   
+    | Settings | Values |
+    |----------|--------|
+    |Connectivity method | Public endpoint |
+    |Allow Azure services and resources to access this server | Yes |
+    | Add current client IP address | Yes  |
+    | Connection policy | Default |
+    | Minimum TLS version | TLS 1.2 |
 
-8. Select **Next: Security** at the bottom of the page, then keep the default settings as it is.
+
+8. Select **Next: Security** at the bottom of the page, modify the below settings as below
+
+   | Settings | Values |
+   |----------|--------|
+   | Enable Microsoft Defender for SQL | Not now |
+   | Ledger | Not configured  |
+   | Server identity | Not configured |
+   | Server level key | Service-managed key selected |
+   | Database level key | Not configured |
+   | Enable secure enclaves | Off |
 
 9. Select **Next: Additional settings** at the bottom of the page.
 
@@ -115,4 +132,4 @@ The query editor is a browser-based interface that you can use to run Transact-S
 
 Now that you've created the database and learned how to use the query editor to run Transact-SQL code, you can return to the query editor in the Azure Portal at any time to complete the lab exercises.
 
-> **Tip**: When you've finished with the database, delete the resources you created in your Azure subscription to avoid unnecessary charges.
+
