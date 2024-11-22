@@ -34,6 +34,8 @@ In this exercise you'll use a transaction to ensure that when a row is inserted 
 
     *Conversion failed when converting date and/or time from character string.*
 
+    ![](../media/46.png)
+
 1. Create a new query and enter the following code into the new query window: 
 
     ```sql
@@ -47,6 +49,8 @@ In this exercise you'll use a transaction to ensure that when a row is inserted 
     ```
 
     A new row for *Norman Newcustomer* was inserted into the Customer table (and another was inserted into the Address table). However, the insert for the CustomerAddress table failed. The database is now inconsistent as there's no link between the new customer and their address.
+
+    ![](../media/47.png)
 
     To fix this, you'll need to delete the two rows that were inserted.
 
@@ -112,6 +116,7 @@ Lower level errors can require that you explicitly handle the error and rollback
 
     *Violation of UNIQUE KEY constraint 'AK_CustomerAddress_rowguid'. Cannot insert duplicate key in object 'SalesLT.CustomerAddress'. The duplicate key value is (16765338-dbe4-4421-b5e9-3836b9278e63).*
 
+    ![](../media/48.png)
 1. Switch back to the query containing the SELECT customer statement and run the query to see if the *Norman Newcustomer* row was added.
 
     Even though an error occurred in the transaction, a new record has been added and the database is once again inconsistent.

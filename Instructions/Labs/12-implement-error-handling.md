@@ -37,6 +37,7 @@ The Adventureworks database contains details of products, including their size. 
     ```
 
 1. Review the results, noting that the size in inches of product *680* is returned successfully.
+    ![](../media/43.png)
 1. Modify the test code to use product *710*, which has the size value "L":
 
     ```sql
@@ -46,6 +47,7 @@ The Adventureworks database contains details of products, including their size. 
     ```
 
 1. Run the modified test code and review the output messages. An error occurs, causing query execution to stop.
+    ![](../media/44.png)
 
 ## Use TRY/CATCH to handle an error
 
