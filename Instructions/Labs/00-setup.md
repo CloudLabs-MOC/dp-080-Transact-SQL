@@ -40,14 +40,12 @@ In this task, you will learn how to use Azure portal to create a single database
     | Settings | Values |
     |  -- | -- |
     | Subscription | *Leave default subscription* |
-    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>** from the dropdown list** |
-    | Database name | **Adventureworks** |
+    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>(1)** from the dropdown list** |
+    | Database name | Enter **Adventureworks(2)** |
    
-    ![image](../media/lab4-1-1.png) 
+    ![image](../media/set1n.png) 
 
-4. For server, click **Create new**.
-
-    ![image](../media/lab4-1-2.png) 
+4. For server, click **Create new(3)**.
 
 5. On **Create SQL Database Server** page, please enter the following details and click on **Ok**
 
@@ -55,44 +53,49 @@ In this task, you will learn how to use Azure portal to create a single database
     |  -- | -- |      
     | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/>** |
     | Location | **East US** |
-    | Authentication method | **Use SQL authentication** |
-    | Server admin login | **contosoadmin** |
-    | Password |  **Contoso@123** |
-    | Confirm password | **Contoso@123** |    
+    | Authentication method | **Use Microsoft Entra-only authentication** |
+    | Select Microsoft Entra admin | click on **Set admin** and select **<inject key="AzureAdUserEmail"></inject>** from the list** |
     
-    ![image](../media/Nimage-40.png)    
+    ![image](../media/set2n.png)   
+
+    ![image](../media/set3n.png)  
+
+    ![image](../media/set4n.png)  
 
 6. After creating the database server, please enter the following and click on **Next : Networking >**
 
     | Settings | Values |
     |  -- | -- |      
     | Want to use SQL elastic pool? | **No** |    |
-    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 1 vCores, 32 GB storage, zone redundant disabled)** is selected  |
-    | Backup storage redundancy |  **Local redundant storage** |
+    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 2 vCores, 32 GB storage, zone redundant disabled)** is selected using configure database option   |
+    | Backup storage redundancy |  **Local redundant backup storage** |
     
-    ![image](../media/Nimage-41.png)
+    ![image](../media/set5n.png)
  
 7. On the **Networking** tab, modify the below settings as below
    
     | Settings | Values |
     |----------|--------|
-    |Connectivity method | Public endpoint |
-    |Allow Azure services and resources to access this server | Yes |
-    | Add current client IP address | Yes  |
-    | Connection policy | Default |
-    | Minimum TLS version | TLS 1.2 |
+    |Connectivity method | **Public endpoint** |
+    |Allow Azure services and resources to access this server | **Yes** |
+    | Add current client IP address | **Yes**  |
+    | Connection policy | **Default** |
+    | Minimum TLS version | **TLS 1.2** |
 
+    ![image](../media/set6n.png)
+
+    ![image](../media/set7n.png)
 
 8. Select **Next: Security** at the bottom of the page, modify the below settings as below
 
    | Settings | Values |
    |----------|--------|
-   | Enable Microsoft Defender for SQL | Not now |
-   | Ledger | Not configured  |
-   | Server identity | Not configured |
-   | Server level key | Service-managed key selected |
-   | Database level key | Not configured |
-   | Enable secure enclaves | Off |
+   | Enable Microsoft Defender for SQL | **Not now** |
+   | Ledger | **Not configured**  |
+   | Server identity | **Not configured** |
+   | Server level key | **Service-managed key selected** |
+   | Database level key | **Not configured** |
+   | Enable secure enclaves | **Off** |
 
 9. Select **Next: Additional settings** at the bottom of the page.
 
