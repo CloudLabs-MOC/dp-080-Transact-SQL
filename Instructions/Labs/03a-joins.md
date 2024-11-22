@@ -26,6 +26,8 @@ An inner join is used to find related data in two tables. For example, suppose y
 
 1. Run the query, and after a few seconds, review the results, which include the **ProductName** from the products table and the corresponding **Category** from the product category table. Because the query uses an **INNER** join, any products that do not have corresponding categories, and any categories that contain no products are omitted from the results.
 
+    ![](../media/12.png)
+
 1. Modify the query as follows to remove the **INNER** keyword, and re-run it.
 
     ```sql
@@ -62,6 +64,8 @@ An inner join is used to find related data in two tables. For example, suppose y
 
 1. Run the modified query and note that it returns data from all three tables.
 
+    ![](../media/13.png)
+
 ## Use outer joins
 
 An outer join is used to retrieve all rows from one table, and any corresponding rows from a related table. In cases where a row in the outer table has no corresponding rows in the related table, *NULL* values are returned for the related table fields. For example, suppose you want to retrieve a list of all customers and any orders they have placed, including customers who have registered but never placed an order.
@@ -77,6 +81,7 @@ An outer join is used to retrieve all rows from one table, and any corresponding
     ```
 
 2. Run the query and note that the results contain data for every customer. If a customer has placed an order, the order number is shown. Customers who have registered but not placed an order are shown with a *NULL* order number.
+
 
     Note the use of the **LEFT** keyword. This identifies which of the tables in the join is the *outer* table (the one from which all rows should be preserved). In this case, the join is between the **Customer** and **SalesOrderHeader** tables, so a **LEFT** join designates **Customer** as the outer table. Had a **RIGHT** join been used, the query would have returned all records from the **SalesOrderHeader** table and only matching data from the **Customer** table (in other words, all orders including those for which there was no matching customer record). You can also use a **FULL** outer join to preserve unmatched rows from *both* sides of the join (all customers, including those who haven't placed an order; and all orders, including those with no matching customer), though in practice this is used less frequently.
 
@@ -103,6 +108,8 @@ An outer join is used to retrieve all rows from one table, and any corresponding
     ```
 
 6. Run the query and review the results, which contain data for customers who have not placed any orders.
+
+    ![](../media/14.png)
 7. Replace the query with the following one, which uses outer joins to retrieve data from three tables.
 
     ```sql
@@ -131,6 +138,8 @@ An outer join is used to retrieve all rows from one table, and any corresponding
     ```
 
 10. Run the query and review the results, which include product names, categories, and sales order numbers.
+
+    ![](../media/15.png)
 
 ## Use a cross join
 
