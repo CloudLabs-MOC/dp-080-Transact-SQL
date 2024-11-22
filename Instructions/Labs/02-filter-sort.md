@@ -60,6 +60,8 @@ It's often useful to sort query results into a particular order.
 
 1. Run the query and review the results. Note that they are sorted into descending order of **ListPrice**, and each set of products with the same price is sorted in ascending order of **Name**.
 
+    ![](../media/6.png)
+
 ## Restrict results using TOP
 
 Sometimes you only want to return a specific number of rows. For example, you might want to find the twenty most expensive products.
@@ -91,6 +93,8 @@ Sometimes you only want to return a specific number of rows. For example, you mi
     ```
 
 6. Note that this time the results contain the 20% most expensive products.
+
+    ![](../media/7.png)
 
 ## Retrieve pages of results with OFFSET and FETCH
 
@@ -127,6 +131,8 @@ Often, multiple rows in a table may contain the same values for a given subset o
     ```
 
 4. Use the **&#x23f5;Run** button to run the query, and and after a few seconds, review the results, which includes the color of each product in the table.
+
+    ![](../media/8.png)
 
 5. Modify the query as follows, and re-run it.
 
@@ -167,6 +173,8 @@ Most queries for application development or reporting involve filtering the data
     WHERE ProductModelID = 6
     ORDER BY Name;
     ```
+
+    ![](../media/9.png)
 
 2. Run the query and review the results, which contain the **Name**, **Color**, and **Size** for each product with a **ProductModelID** value of *6* (this is the ID for the *HL Road Frame* product model, of which there are multiple variants).
 3. Replace the query with the following code, which uses the *not equal* (<>) operator, and run it.
@@ -210,6 +218,8 @@ Most queries for application development or reporting involve filtering the data
     ```
 
 10. Review the results. This time the results include products with a **ProductNumber** that matches patterns similar to FR-*xNNx*-*NN* (in which *x* is a letter and *N* is a numeral).
+
+    ![](../media/10.png)
 
     **Tip**: To learn more about pattern-matching with the **LIKE** operator, see the [Transact-SQL documentation](https://docs.microsoft.com/sql/t-sql/language-elements/like-transact-sql).
 
@@ -256,6 +266,7 @@ Most queries for application development or reporting involve filtering the data
     WHERE ProductNumber LIKE 'FR%' OR ProductCategoryID IN (5,6,7);
     ```
 
+    ![](../media/11.png)
 ## Challenges
 
 Now that you've seen some examples of filtering and sorting data, it's your chance to put what you've learned into practice.
