@@ -105,14 +105,9 @@ In this task, you will learn how to use Azure portal to create a single database
 
 11. After selecting AdventureWorksLT sample database, please select **Review + Create**.
 
-    ![image](../media/Nimage-43.png)
-
 12. After validation is completed successfully, please select **Create**.
  
 13. Once the deployment is complete, please select **Go to Resource**.
-
-    ![image](../media/Nimage-44.png)
-
 
 ## Open the query editor
 
