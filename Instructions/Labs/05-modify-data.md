@@ -66,6 +66,7 @@ You use the **INSERT** statement to insert data into a table.
     ```
 
 1. Run the query and review the message, which should indicate that 1 row was affected.
+    ![](../media/23.png)
 1. Switch to the query pane containing the **SELECT** query and run it. Note that the third row has been inserted, once again using the default value for the **CallTime** field and *NULL* for the **Notes** field.
 1. Switch back to the query pane containing the **INSERT** statement, and replace it  with the following code, which inserts two rows of data into the **SalesLT.CallLog** table.
 
@@ -85,9 +86,10 @@ You use the **INSERT** statement to insert data into a table.
     SELECT SalesPerson, CustomerID, Phone, 'Sales promotion call'
     FROM SalesLT.Customer
     WHERE CompanyName = 'Big-Time Bike Store';
-    ```
+    ```  
 
 1. Run the query and review the message, which should indicate that 2 rows were affected.
+    ![](../media/24.png)
 1. Switch to the query pane containing the **SELECT** query and run it. Note that two new rows have been added to the table. These are the rows that were retrieved by the **SELECT** query.
 1. Switch back to the query pane containing the **INSERT** statement, and replace it  with the following code, which inserts a row and then uses the **SCOPE_IDENTITY** function to retrieve the most recent *identity* value that has been assigned in the database (to any table), and also the **IDENT_CURRENT** function, which retrieves the latest *identity* value in the specified table.
 
@@ -101,6 +103,7 @@ You use the **INSERT** statement to insert data into a table.
     ```
 
 1. Run the code and review the results, which should be two numeric values, both the same.
+    ![](../media/25.png)
 1. Switch to the query pane containing the **SELECT** query and run it to validate that the new row that has been inserted has a **CallID** value that matches the *identity* value returned when you inserted it.
 1. Switch back to the query pane containing the **INSERT** statement, and replace it  with the following code, which enables explicit insertion of *identity* values and inserts a new row with a specified **CallID** value, before disabling explicit *identity* insertion again.
 
@@ -130,6 +133,7 @@ To modify existing rows in a table, use the **UPDATE** statement.
     ```
 
 2. Run the **UPDATE** statement and review the message, which should indicate the number of rows affected.
+    ![](../media/26.png)
 3. Switch to the query pane containing the **SELECT** query and run it. Note that the rows that previously had *NULL* values for the **Notes** field now contain the text *No notes*.
 4. Switch back to the query pane containing the **UPDATE** statement, and replace it with the following code, which updates multiple columns.
 
@@ -164,6 +168,7 @@ To delete rows in the table, you generally use the **DELETE** statement; though 
     ```
 
 2. Run the **DELETE** statement and review the message, which should indicate the number of rows affected.
+    ![](../media/27.png)
 3. Switch to the query pane containing the **SELECT** query and run it. Note that rows with a **CallDate** older than 7 days have been deleted.
 4. Switch back to the query pane containing the **DELETE** statement, and replace it with the following code, which uses the **TRUNCATE TABLE** statement to remove all rows in the table.
 
