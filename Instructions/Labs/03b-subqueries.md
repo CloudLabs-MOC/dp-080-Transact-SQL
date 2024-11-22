@@ -93,6 +93,8 @@ So far, the subqueries we've used have been independent of the outer query. In s
     ```
 
 4. Run the query and review the results, which should only contain product order records for which the quantity ordered is the maximum ordered for that product.
+
+    ![](../media/17.png)
 5. Replace the query with the following code:
 
     ```sql

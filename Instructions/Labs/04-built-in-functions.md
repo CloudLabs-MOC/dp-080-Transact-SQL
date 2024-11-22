@@ -43,6 +43,8 @@ Transact-SQL provides a large number of functions that you can use to extract ad
 
 1. Run the query and review the results.
 
+    ![](../media/18.png)
+
     Note that the **DATENAME** function returns a different value depending on the *datepart* parameter that is passed to it. In this example, **mm** returns the month name, and **dw** returns the weekday name.
 
     Note also that the **DATEDIFF** function returns the specified time interval between and start date and an end date. In this case the interval is measured in years (**yy**), and the end date is determined by the **GETDATE** function; which when used with no parameters returns the current date and time.
@@ -74,6 +76,8 @@ Transact-SQL provides a large number of functions that you can use to extract ad
     - The product type, which is indicated by the first two characters of the product number, starting from the left (using the **LEFT** function).
     - The model code, which is extracted from the product number by using the **SUBSTRING** function, which extracts the four characters immediately following the first *-* character, which is found using the **CHARINDEX** function.
     - The size code, which is extracted using the **SUBSTRING** function to extract the two characters following the last *-* in the product code. The last *-* character is found by taking the total length (**LEN**) of the product ID and finding its index (**CHARINDEX**) in the reversed (**REVERSE**) first three characters from the right (**RIGHT**). This example shows how you can combine functions to apply fairly complex logic to extract the values you need.
+
+        ![](../media/19.png)
 
 ## Use logical functions
 
@@ -108,6 +112,8 @@ Transact-SQL provides a large number of functions that you can use to extract ad
     ```
 
 6. Run the query and note that the **CHOOSE** function returns the value in the ordinal position in a list based on the a specified index value. The list index is 1-based so in this query the function returns *Bikes* for category 1, *Components* for category 2, and so on.
+
+    ![](../media/20.png)
 
 ## Use aggregate functions
 
@@ -177,6 +183,8 @@ Aggregate functions are especially useful when combined with the **GROUP BY** cl
 
 6. Run the query, noting that it returns the sales totals for salespeople who have sold items, and 0.00 for those who haven't.
 
+    ![](../media/21.png)
+
 ## Filter groups with the HAVING clause
 
 After grouping data, you may want to filter the results to include only the groups that meet specified criteria. For example, you may want to return only salespeople with more than 100 customers.
@@ -203,6 +211,8 @@ After grouping data, you may want to filter the results to include only the grou
     ```
 
 4. Run the query, and note that it returns only salespeople who have more than 100 customers assigned to them.
+
+    ![](../media/22.png)
 
 ## Challenges
 
