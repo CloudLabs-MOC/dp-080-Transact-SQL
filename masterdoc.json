@@ -2,7 +2,7 @@
   {
     "Name": "DP-080T00: Querying Data with Microsoft-Transact SQL",
     "Language": "English",
-    "BaseURL": "https://github.com/CloudLabs-MOC/dp-080-Transact-SQL/tree/prod",
+    "BaseURL": "https://github.com/CloudLabs-MOC/dp-080-Transact-SQL/tree/prod-v1",
     "Files": [
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod-v1/Instructions/Labs/LabIntro.md",
