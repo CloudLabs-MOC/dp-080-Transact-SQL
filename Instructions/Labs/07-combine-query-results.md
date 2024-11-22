@@ -47,6 +47,7 @@ The UNION operator enables you to combine the results from multiple queries into
     ```
 
 1. Run the entire query, and view the results and messages. The results include a row for each product for which there have been no sales *or*  that has not been discontinued. Rows with the same values in each column from multiple queries are consolidated into a single row in the results - eliminating duplicate rows for products that are both unsold and not discontinued.
+    ![](../media/30.png)
 1. Modify the query to add the ALL keyword to the UNION operator:
 
     ```sql
@@ -133,7 +134,7 @@ Now you will write a table-valued function to return the product category and qu
     ```
 
 1. Run the query and view the results.
-
+    ![](../media/31.png)
 ## Challenge
 
 Use the following code to create a table-valued function that retrieves address details for a given customer:
