@@ -10,45 +10,89 @@ You can complete the Transact-SQL exercises in a sample database in Microsoft Az
 
 > **Note**: You will need a [Microsoft Azure subscription](https://azure.microsoft.com/free) in which you have sufficient permissions to create and configure the required resources.
 
-## Provision Azure SQL Database
+## Exercise 1: Deploy an Azure SQL database
 
-First, you need to provision an instance of Azure SQL Database with a sample database that you can query.
+Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most database management functions like upgrading, patching, backups, and monitoring without the need for user intervention. Azure SQL Database is always running on the most recent stable version of the SQL Server database engine and a patched operating system, with 99.99% uptime. In this exercise, you are going to deploy an Azure SQL database. 
 
-1. In a web browser, navigate to the [Azure portal](https://portal.azure.com) at `https://portal.azure.com` and sign in using the credentials associated with your Azure subscription.
-1. On the **Home** page, create a **SQL Database** resource with the following settings (be sure to select the **sample** database option on the **Additional settings** tab!):
-    - **Basics**:
-        - **Subscription**: *Select your Azure subscription*
-        - **Resource group**: *Create or select a resource group where you want to create the SQL Database resource*
-        - **Database name**: `Adventureworks`
-        - **Server**: Create a new server with the following settings:
-            - **Server name**: *A unique name*
-            - **Location**: *Select any available region*
-            - **Authentication method**: Use Microsoft Entra-only authentication
-            - **Select Microsoft Entra admin**: *Select your own user account*
-        - **Want to use SQL elastic pool?**: No
-        - **Workload environment**: Development
-        - **Compute + storage**: General purpose - serverless *(with the default configuration)*
-        - **Backup storage redundancy**: Locally-redundant backup storage
-    - **Networking**:
-        - **Connectivity method**: Public endpoint
-        - **Firewall rules**:
-            - **Allow Azure services and resources to access this server**: Yes
-            - **Add current client IP address**: Yes
-        - **Connection policy**: Default
-        - **Minimum TLS version**: TLS 1.2
-    - **Security**:
-        - **Enable Microsoft Defender for SQL**: Not now
-        - **Ledger**: Not configured
-        - **Server identity**: Not configured
-        - **Transparent data encryption key management**:
-            - **Server level key**: Service-managed key selected
-            - **Database level key**: Not configured
-        - **Enable secure enclaves**: Off
-    - **Additional settings**:
-        - **Use existing data**: Sample *(Confirm that **AdventureWorksLT** database will be created)*
-    - **Tags**:
-        - None
-1. Wait for deployment to complete. Then go to the **Adventureworks** SQL Database resource you deployed.
+In this exercise, you will perform the following task:
+
++ Task 1: Create an Azure SQL database with Adventure Works pre-loaded.
+
+### Estimated Timing: 20 minutes
+
+### Task 1: Create an Azure SQL database with Adventure Works pre-loaded
+
+In this task, you will learn how to use Azure portal to create a single database with Adventure works sample database
+
+#### Steps
+
+1. Login into Azure portal and on the search box type SQL database, then please select the **SQL database** option from the list.
+
+   ![image](../media/Nimage-38.png)
+
+2. Please select the **+ Create** button.
+
+   ![image](../media/Nimage-39.png)
+
+
+3. Under **Basic** tab, please enter the following details:
+
+    | Settings | Values |
+    |  -- | -- |
+    | Subscription | *Leave default subscription* |
+    | Resource group | Select the resource group name **ODL-AZ-305M04B-<inject key="DeploymentID" enableCopy="false"/>** from the dropdown list** |
+    | Database name | **adventureworkscontoso** |
+   
+    ![image](../media/lab4-1-1.png) 
+
+4. For server, click **Create new**.
+
+    ![image](../media/lab4-1-2.png) 
+
+5. On **Create SQL Database Server** page, please enter the following details and click on **Ok**
+
+    | Settings | Values |
+    |  -- | -- |      
+    | Server name | **contososerv<inject key="DeploymentID" enableCopy="false"/>** |
+    | Location | **East US** |
+    | Authentication method | **Use SQL authentication** |
+    | Server admin login | **contosoadmin** |
+    | Password |  **Contoso@123** |
+    | Confirm password | **Contoso@123** |    
+    
+    ![image](../media/Nimage-40.png)    
+
+6. After creating the database server, please enter the following and click on **Next : Networking >**
+
+    | Settings | Values |
+    |  -- | -- |      
+    | Server name | **contososerv<inject key="DeploymentID" enableCopy="false"/>** |
+    | Want to use SQL elastic pool? | **No** |    |
+    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 1 vCores, 32 GB storage, zone redundant disabled)** is selected  |
+    | Backup storage redundancy |  **Geo-redundant backup storage** |
+    
+    ![image](../media/Nimage-41.png)
+ 
+7. On the **Networking** tab, review the default settings.
+
+8. Select **Next: Security** at the bottom of the page, then keep the default settings as it is.
+
+9. Select **Next: Additional settings** at the bottom of the page.
+
+10. On the **Additional settings** tab, in the **Data source** section, select **Sample** for Use existing data and click **Ok** on the **AdventureWorksLT** dialogue box. Instead of an empty blank database, this creates an AdventureWorksLT sample database with tables and data to query and experiment with.
+
+    ![image](../media/Nimage-42.png)
+
+11. After selecting AdventureWorksLT sample database, please select **Review + Create**.
+
+    ![image](../media/Nimage-43.png)
+
+12. After validation is completed successfully, please select **Create**.
+ 
+13. Once the deployment is complete, please select **Go to Resource**.
+
+    ![image](../media/Nimage-44.png)
+
 
 ## Open the query editor
 
