@@ -35,6 +35,8 @@ Stored procedures are named groups of Transact-SQL statements that can be used a
 
 1. Select the EXECUTE statement to highlight it, and then run it. The stored procedure is executed and returns the top 10 products by price.
 
+    ![](../media/39.png)
+
 1. Now alter the stored procedure by adding an input parameter so that you can specify how many "top" products you want to return. In the query pane, type the following T-SQL code:
 
     ```sql
@@ -56,6 +58,7 @@ Stored procedures are named groups of Transact-SQL statements that can be used a
 
 1. Highlight the modified EXECUTE statement and run it to call the stored procedure, passing the parameter value by name. This time the stored procedure returns the top 20 products by price.
 
+    ![](../media/40.png)
 ## Create functions
 
 Functions are similar to stored procedures, but can be used in SELECT statements like built in functions.
@@ -89,6 +92,8 @@ Scalar functions return a single value.
     ```
 
 1. Select and run the SELECT statement and view the results, which show the ID, name, list price, and cost of each product together with a sale price that is calculated by using the function you created to apply a 10% discount.
+
+    ![](../media/41.png)
 
 ### Create a table-valued function
 
@@ -124,6 +129,8 @@ Table-valued functions return a table.
     ```
 
 1. Select and run the SELECT statement and view the results., The CROSS APPLY clause runs the function for each category in the **SalesLT.ProductCategory** table - creating an inner join between the table of product categories and the table returned by the function.
+
+    ![](../media/42.png)
 
 ## Challenges
 
