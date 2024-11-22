@@ -55,6 +55,8 @@ The SELECT statement is the primary Transact-SQL statement used to query tables 
 
 1. Run the query, and note that the **+** operator in the calculated **ProductDetails** column is used to *concatenate* the **Color** and **Size** column values (with a literal comma between them). The behavior of this operator is determined by the data types of the columns - had they been numeric values, the **+** operator would have *added* them. Note also that some results are *NULL* - we'll explore NULL values later in this lab.
 
+    ![](../media/1.png)
+
 ## Work with data types
 
 As you just saw, columns in a table are defined as specific data types, which affects the operations you can perform on them.
@@ -67,6 +69,8 @@ As you just saw, columns in a table are defined as specific data types, which af
     ```
 
 2. Note that this query returns an error. The **+** operator can be used to *concatenate* text-based values, or *add* numeric values; but in this case there's one numeric value (**ProductID**) and one text-based value (**Name**), so it's unclear how the operator should be applied.
+
+    ![](../media/2.png)
 3. Modify the query as follows, and re-run it:
 
     ```sql
@@ -93,6 +97,8 @@ As you just saw, columns in a table are defined as specific data types, which af
         CONVERT(nvarchar(30), SellStartDate, 126) AS ISO8601FormatDate
     FROM SalesLT.Product; 
     ```
+
+    ![](../media/3.png)
 
 8. Replace the existing query with the following code, and run it.
 
@@ -154,6 +160,8 @@ We've seen some examples of queries that return *NULL* values. *NULL* is general
 
     The previous query returns the last date on which the product selling status was updated, but doesn't actually tell us the sales status itself. To determine that, we'll need to check the dates to see if the **SellEndDate** is *NULL*. To do this, you can use a **CASE** expression in the **SELECT** clause to check for *NULL* **SellEndDate** values. The **CASE** expression has two variants: a *simple* **CASE** that evaluates a specific column or value, or a *searched* **CASE** that evaluates one or more expressions.
 
+    ![](../media/4.png)
+
     In this example, our **CASE** expression must determine if the **SellEndDate** column is *NULL*. Typically, when you are trying to check the value of a column you can use the **=** operator; for example the predicate **SellEndDate = '01/01/2005'** returns **True** if the **SellEndDate** value is *01/01/2005*, and **False** otherwise. However, when dealing with *NULL* values, the default behavior may not be what you expect. Remember that *NULL* actually means *unknown*, so using the **=** operator to compare two unknown values always results in a value of *NULL* - semantically, it's impossible to know if one unknown value is the same as another. To check to see if a value is *NULL*, you must use the **IS NULL** predicate; and conversely to check that a value is not *NULL* you can use the **IS NOT NULL** predicate.
 
 6. Run the following query, which includes *searched* **CASE** that uses an **IS NULL** expression to check for *NULL* **SellEndDate** values.
@@ -187,6 +195,7 @@ We've seen some examples of queries that return *NULL* values. *NULL* is general
 
 8. Review the query results and note that the **ProductSize** column contains the text-based description of the size for *S*, *M*, *L*, and *XL* sizes; the measurement value for numeric sizes, and *n/a* for any other sizes values.
 
+    ![](../media/5.png)
 ## Challenges
 
 Now that you've seen some examples of **SELECT** statements that retrieve data from a table, it's time to try to compose some queries of your own.
