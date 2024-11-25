@@ -29,7 +29,7 @@ In this exercise, you'll use pivoting and grouping sets to query the **Adventure
     ```
 
 1. Run your code to create the view.
-    ![](../media/34.png)
+
 1. You can now query the view to retrieve information about the regions where customers have their main office. For example, run the following query:
 
     ```sql
@@ -37,7 +37,8 @@ In this exercise, you'll use pivoting and grouping sets to query the **Adventure
     FROM SalesLT.v_CustomerRegions
     GROUP BY CountryRegion;
     ```
-
+    ![](../media/34.png)
+    
     The query returns the number of customers in each region. Howeverm suppose you wanted the data presented as a single row that contains the number of offices in each region, like this:
 
     | Data | Canada | United Kingdom | United States |
