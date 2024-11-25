@@ -1,16 +1,16 @@
----
-lab:
-    title: 'Introduction to programming with Transact-SQL'
-    module: 'Additional exercises'
----
+# Lab 10: Introduction to programming with Transact-SQL
+### Estimated Duration: 30 minutes
+In this Lab, you'll use get an introduction to programming with Transact-SQL using the **Adventureworks** database.
 
-# Introduction to programming with Transact-SQL
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Declare variables and retrieve values
+- Task 2: Explore variable scope
+- Task 3: Use table variables
+- Task 4: Write conditional logic
+- Task 5: Use a loop to write iterative code
 
-In this exercise, you'll use get an introduction to programming with Transact-SQL using the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Declare variables and retrieve values
+## Task 1: Declare variables and retrieve values
 
 1. Open a query editor for your **Adventureworks** database, and create a new query.
 1. In the query pane, type the following code:
@@ -83,7 +83,7 @@ In this exercise, you'll use get an introduction to programming with Transact-SQ
 
     (Note that the variable values are still included in the messages because of the PRINT statements)
 
-## Explore variable scope
+## Task 2: Explore variable scope
 
 Now, we'll look at the behavior of variables when code is run in batches.
 
@@ -117,7 +117,7 @@ Now, we'll look at the behavior of variables when code is run in batches.
 
 1. Remove the GO statement and verify that the code works as before.
 
-## Use table variables
+## Task 3: Use table variables
 
 So far, you've used variables that encapsulate a single value of a specific data type. In Transact-SQL, you can also use *table* variables to encapsulate multiple rows of data.
 
@@ -148,7 +148,7 @@ So far, you've used variables that encapsulate a single value of a specific data
 
     ![](../media/36.png)
 
-## Write conditional logic
+## Task 4: Write conditional logic
 
 Conditional logic is used to *branch* program execution flow based on specific conditions. The most common form of conditional logic is the IF..ELSE statement. Transact-SQL also supports a CASE statement.
 
@@ -241,7 +241,7 @@ Conditional logic is used to *branch* program execution flow based on specific c
 
 1. Run the code and verify that the results are same as before.
 
-## Use a loop to write iterative code
+## Task 5: Use a loop to write iterative code
 
 Loops are used to perform logic iteratively, running the same code multiple times - usually until a condition is met. In Transact-SQL, you can implement loops using the WHILE statement.
 

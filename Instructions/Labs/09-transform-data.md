@@ -1,16 +1,13 @@
----
-lab:
-    title: 'Use pivoting and grouping sets'
-    module: 'Additional exercises'
----
+# Lab 09: Use pivoting and grouping sets
+### Estimated Duration: 30 minutes
+In this Lab, you'll use pivoting and grouping sets to query the **Adventureworks** database.
 
-# Use pivoting and grouping sets
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Pivot data using the PIVOT operator
+- Task 2: Group data using a grouping subclause
 
-In this exercise, you'll use pivoting and grouping sets to query the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Pivot data using the PIVOT operator
+## Task 1: Pivot data using the PIVOT operator
 
 1. Open a query editor for your **Adventureworks** database, and create a new query.
 1. In the query editor, enter the following code to create a view that contains the ID, company name, and main office region for all customers
@@ -64,7 +61,7 @@ In this exercise, you'll use pivoting and grouping sets to query the **Adventure
 
     ![](../media/35.png)
 
-## Group data using a grouping subclause
+## Task 2: Group data using a grouping subclause
 
 Use subclauses like **GROUPING SETS**, **ROLLUP**, and **CUBE** to group data in different ways. Each subclause allows you to group data in a unique way. For instance, **ROLLUP** allows you to dictate a hierarchy and provides a grand total for your groupings. Alternatively, you can use **CUBE** to get all possible combinations for groupings.
 

@@ -1,10 +1,15 @@
-# Implement error handling with Transact-SQL
+# Lab 12: Implement error handling with Transact-SQL
+### Estimated Duration: 30 minutes
+In this Lab, you'll use various Transact-SQL error handling techniques.
 
-In this exercise, you'll use various Transact-SQL error handling techniques.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Observe unhandled error behavior in Transact-SQL
+- Task 2: Use TRY/CATCH to handle an error
+- Task 3: Capture error details
+- Task 4: Throw the error to the client application
 
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Observe unhandled error behavior in Transact-SQL
+## Task 1: Observe unhandled error behavior in Transact-SQL
 
 The Adventureworks database contains details of products, including their size. Numeric values indicate the product size in centimeters, and you will use a stored procedure to convert these sizes to inches. 
 
@@ -43,7 +48,7 @@ The Adventureworks database contains details of products, including their size. 
 1. Run the modified test code and review the output messages. An error occurs, causing query execution to stop.
     
 
-## Use TRY/CATCH to handle an error
+## Task 2: Use TRY/CATCH to handle an error
 
 Transact-SQL supports structured exception handling through the use of a TRY/CATCH block.
 
@@ -77,7 +82,7 @@ Transact-SQL supports structured exception handling through the use of a TRY/CAT
 
    ![](../media/44.png)
 
-## Capture error details
+## Task 3: Capture error details
 
 The message returned in the CATCH block indicates that an error occurred, but provides no details that would help troubleshoot the problem. You can use built-in functions to get more information about the current error and use those to provide more details.
 
@@ -113,7 +118,7 @@ The message returned in the CATCH block indicates that an error occurred, but pr
 
     > **Tip**: In this example, the error details are just printed in the query message output. In a production solution, you might write the error details to a log table to assist in troubleshooting.
 
-## Throw the error to the client application
+## Task 4: Throw the error to the client application
 
 So far, you've used a TRY/CATCH block to handle an error gracefully. The client application that calls the stored procedure does not encounter an exception. In multi-tier application designs, a common practice is to handle exceptions in the data tier to log details for troubleshooting purposes and ensure the integrity of the database, but then propagate the error to the calling application tier, which includes its own exception handling logic. 
 

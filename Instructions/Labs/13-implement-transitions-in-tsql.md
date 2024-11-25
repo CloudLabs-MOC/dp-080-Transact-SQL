@@ -1,10 +1,15 @@
-# Implement transactions with Transact SQL
+# Lab 13: Implement transactions with Transact SQL
+### Estimated Duration: 30 minutes
+In this Lab, you'll use transactions to enforce data integrity in the **AdventureWorks** database.
 
-In this exercise, you'll use transactions to enforce data integrity in the **AdventureWorks** database.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Insert data without transactions
+- Task 2: Insert data using a transaction
+- Task 3: Handle errors and explicitly rollback transactions
+- Task 4: Check the transaction state before rolling back
 
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Insert data without transactions
+## Task 1: Insert data without transactions
 
 Consider a website that needs to store customer information. As part of the customer registration, data about a customer and their address need to stored. A customer without an address will cause problems for the shipping when orders are made.
 
@@ -60,7 +65,7 @@ In this exercise you'll use a transaction to ensure that when a row is inserted 
 
     > **Note**: This code only works because you are the only user working in the database. In a real scenario, you would need to ascertain the IDs of the records that were inserted and specify them explicitly in case new customer and address records had been inserted after you ran your original code.
 
-## Insert data using a transaction
+## Task 2: Insert data using a transaction
 
 All of these statements need to run as a single atomic transaction. If any one of them fails, then all statements should fail. Let's group them together in a transaction.
 
@@ -85,7 +90,7 @@ All of these statements need to run as a single atomic transaction. If any one o
 
 1. Switch to the query containing the SELECT statement to retrieve the address city for the latest customer record, and run it. This time, there should be no record for *Norman Newcustomer*. Using a transaction with these statements has triggered an automatic rollback. The level 16 conversion error is high enough to cause all statements to be rolled back.
 
-## Handle errors and explicitly rollback transactions
+## Task 3: Handle errors and explicitly rollback transactions
 
 Lower level errors can require that you explicitly handle the error and rollback any active transactions.
 
@@ -147,7 +152,7 @@ Lower level errors can require that you explicitly handle the error and rollback
 
    **Note:** The most recently modified customer record is <u>not</u> for *Norman Newcustomer* - the INSERT statement that succeeded has been rolled back to ensure the database remains consistent.
 
-## Check the transaction state before rolling back
+## Task 4: Check the transaction state before rolling back
 
 The CATCH block will handle errors that occur anywhere in the TRY block, so if an error were to occur outside of the BEGIN TRANSACTION...COMMIT TRANSACTION block, there would be no active transaction to roll back. To avoid this issue, you can check the current transaction state with XACT_STATE(), which returns one of the following values:
 

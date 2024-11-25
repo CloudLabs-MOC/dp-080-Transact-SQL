@@ -1,15 +1,13 @@
----
-lab:
-    title: 'Use window functions'
-    module: 'Additional exercises'
----
-# Use window functions
+# Lab 08: Use window functions
+### Estimated Duration: 30 minutes
+In this Lab, you'll apply window functions on the **Adventureworks** database.
 
-In this exercise, you'll apply window functions on the **Adventureworks** database.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Ranking function
+- Task 2: Aggregation function by partition
 
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Ranking function
+## Task 1: Ranking function
 
 Let's start by creating a query that uses a window function to return a ranking value.
 
@@ -35,7 +33,7 @@ Let's start by creating a query that uses a window function to return a ranking 
 
     > **Tip**: Look closely at the results to see how rank is assigned to categories with the same number of sales.
 
-## Aggregation function by partition
+## Task 2: Aggregation function by partition
 
 Now, let's create a query that returns each product with its category and list price along with the average list price for products in the same category.
 

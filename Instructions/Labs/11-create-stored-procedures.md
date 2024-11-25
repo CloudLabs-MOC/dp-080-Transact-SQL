@@ -1,16 +1,13 @@
----
-lab:
-    title: 'Create stored procedures and functions in Transact-SQL'
-    module: 'Additional exercises'
----
+# Lab 11: Create stored procedures and functions in Transact-SQL
+### Estimated Duration: 30 minutes
+In this Lab, you'll create and run stored procedures in the **Adventureworks** database.
 
-# Create stored procedures and functions in Transact-SQL
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Create a stored procedure
+- Task 2: Create functions
 
-In this exercise, you'll create and run stored procedures in the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Create a stored procedure
+## Task 1: Create a stored procedure
 
 Stored procedures are named groups of Transact-SQL statements that can be used and reused whenever they're needed.
 
@@ -59,7 +56,8 @@ Stored procedures are named groups of Transact-SQL statements that can be used a
 1. Highlight the modified EXECUTE statement and run it to call the stored procedure, passing the parameter value by name. This time the stored procedure returns the top 20 products by price.
 
     ![](../media/40.png)
-## Create functions
+
+## Task 2: Create functions
 
 Functions are similar to stored procedures, but can be used in SELECT statements like built in functions.
 
