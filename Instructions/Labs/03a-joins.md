@@ -1,17 +1,14 @@
----
-lab:
-    title: 'Query Multiple Tables with Joins'
-    module: 'Module 3: Using Joins and Subqueries'
----
+# Lab 03a: Query Multiple Tables with Joins
+### Estimated Duration: 30 minutes
+In this Lab, you'll use the Transact-SQL **SELECT** statement to query multiple tables in the **Adventureworks** database.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Use inner joins
+- Task 2: Use outer joins
+- Task 3: Use a cross join
+- Task 4: Use a self join
 
-# Query Multiple Tables with Joins
-
-In this exercise, you'll use the Transact-SQL **SELECT** statement to query multiple tables in the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Use inner joins
-
+## Task 1: Use inner joins
 An inner join is used to find related data in two tables. For example, suppose you need to retrieve data about a product and its category from the **SalesLT.Product** and **SalesLT.ProductCategory** tables. You can find the relevant product category record for a product based on its **ProductCategoryID** field; which is a foreign-key in the product table that matches a primary key in the product category table.
 
 1. Open a query editor for your **AdventureWorks** database, and create a new query.
@@ -64,7 +61,7 @@ An inner join is used to find related data in two tables. For example, suppose y
 
     ![](../media/13.png)
 
-## Use outer joins
+## Task 2: Use outer joins
 
 An outer join is used to retrieve all rows from one table, and any corresponding rows from a related table. In cases where a row in the outer table has no corresponding rows in the related table, *NULL* values are returned for the related table fields. For example, suppose you want to retrieve a list of all customers and any orders they have placed, including customers who have registered but never placed an order.
 
@@ -139,7 +136,7 @@ An outer join is used to retrieve all rows from one table, and any corresponding
 
     ![](../media/15.png)
 
-## Use a cross join
+## Task 3: Use a cross join
 
 A *cross* join matches all possible combinations of rows from the tables being joined. In practice, it's rarely used; but there are some specialized cases where it is useful.
 
@@ -153,7 +150,7 @@ A *cross* join matches all possible combinations of rows from the tables being j
 
 2. Run the query and note that the results contain a row for every product and customer combination (which might be used to create a mailing campaign in which an indivdual advertisement for each product is emailed to each customer - a strategy that may not endear the company to its customers!).
 
-## Use a self join
+## Task 4: Use a self join
 
 A *self* join isn't actually a specific kind of join, but it's a technique used to join a table to itself by defining two instances of the table, each with its own alias. This approach can be useful when a row in the table includes a foreign key field that references the primary key of the same table; for example in a table of employees where an employee's manager is also an employee, or a table of product categories where each category might be a subcategory of another category.
 

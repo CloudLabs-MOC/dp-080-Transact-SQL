@@ -1,16 +1,13 @@
----
-lab:
-    title: 'Get Started with Transact-SQL'
-    module: 'Module 1: Getting Started with Transact-SQL'
----
+# Lab 01: Get Started with Transact-SQL
+### Estimated Duration: 30 minutes
+In this lab, you will use some basic SELECT queries to retrieve data from the **AdventureWorks** database.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Use SELECT queries to retrieve data
+- Task 2: Work with data types
+- Task 3: Handle NULL values
 
-# Get Started with Transact-SQL
-
-In this exercise, you will use some basic SELECT queries to retrieve data from the **AdventureWorks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Use SELECT queries to retrieve data
+## Task 1: Use SELECT queries to retrieve data
 
 The SELECT statement is the primary Transact-SQL statement used to query tables in a database.
 
@@ -57,7 +54,7 @@ The SELECT statement is the primary Transact-SQL statement used to query tables 
 
     ![](../media/1.png)
 
-## Work with data types
+## Task 2: Work with data types
 
 As you just saw, columns in a table are defined as specific data types, which affects the operations you can perform on them.
 
@@ -118,7 +115,7 @@ As you just saw, columns in a table are defined as specific data types, which af
 
 11. Run the query and note that the numeric **Size** values are converted successfully to integers, but that non-numeric sizes are returned as *NULL*.
 
-## Handle NULL values
+## Task 2: Handle NULL values
 
 We've seen some examples of queries that return *NULL* values. *NULL* is generally used to denote a value that is *unknown*. Note that this is not the same as saying the value is *none* - that would imply that you *know* that the value is zero or an empty string!
 
@@ -196,6 +193,7 @@ We've seen some examples of queries that return *NULL* values. *NULL* is general
 8. Review the query results and note that the **ProductSize** column contains the text-based description of the size for *S*, *M*, *L*, and *XL* sizes; the measurement value for numeric sizes, and *n/a* for any other sizes values.
 
     ![](../media/5.png)
+
 ## Challenges
 
 Now that you've seen some examples of **SELECT** statements that retrieve data from a table, it's time to try to compose some queries of your own.

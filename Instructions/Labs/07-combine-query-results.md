@@ -1,15 +1,15 @@
----
-lab:
-    title: 'Combine query results with set operators'
-    module: 'Additional exercises'
----
-# Combine query results with set operators
-
+# Lab 07: Combine query results with set operators
+### Estimated Duration: 30 minutes
 In this lab, you will use set operators to retrieve results from the **Adventureworks** database.
 
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Write a query that uses the UNION operator
+- Task 2: Write a query that uses the INTERSECT operator
+- Task 3: Write a query that uses the EXCEPT operator
+- Task 4: Write a query that uses the CROSS APPLY operator
 
-## Write a query that uses the UNION operator
+## Task 1: Write a query that uses the UNION operator
 
 The UNION operator enables you to combine the results from multiple queries into a single result set.
 
@@ -63,7 +63,7 @@ The UNION operator enables you to combine the results from multiple queries into
 
 1. Run the modified query, and view the results and messages. The results include a row for each product that has not been discontinued *and* for each product that has not been sold. Some products are listed twice (once because they have not been sold, and once because they have not been discontinued). The ALL keyword produces results that include all rows returned by all of the individual queries - which may result in duplicates.
 
-## Write a query that uses the INTERSECT operator
+## Task 2: Write a query that uses the INTERSECT operator
 
 Now let's try a query using the INTERSECT operator.
 
@@ -82,7 +82,7 @@ Now let's try a query using the INTERSECT operator.
 
 1. Run the query, and view the results and messages. The results include a row for each product for which there have been no sales *and* that has not been discontinued. The results of the INTERSECT operator include only rows that are returned by all of the individual queries.
 
-## Write a query that uses the EXCEPT operator
+## Task 3: Write a query that uses the EXCEPT operator
 
 Now let's try a query using the EXCEPT operator.
 
@@ -101,7 +101,7 @@ Now let's try a query using the EXCEPT operator.
 
 1. Run the query, and view the results and messages. The results include a row for each unsold product other than products that have not been discontinued. The results of the EXCEPT operator include only rows that are returned by the queries *before* the EXCEPT operator.
 
-## Write a query that uses the CROSS APPLY operator
+## Task 4: Write a query that uses the CROSS APPLY operator
 
 Now you will write a table-valued function to return the product category and quantity ordered by specific customers.
 
@@ -135,6 +135,7 @@ Now you will write a table-valued function to return the product category and qu
 
 1. Run the query and view the results.
     ![](../media/31.png)
+    
 ## Challenge
 
 Use the following code to create a table-valued function that retrieves address details for a given customer:

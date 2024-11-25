@@ -1,16 +1,14 @@
----
-lab:
-    title: 'Modify Data'
-    module: 'Module 5: Modifying Data'
----
+# Lab 05: Modify Data
+### Estimated Duration: 30 minutes
+In this Lab, you'll insert, update, and delete data in the **Adventureworks** database.
 
-# Modify Data
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Insert data
+- Task 2: Update data
+- Task 3: Delete data
 
-In this exercise, you'll insert, update, and delete data in the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Insert data
+## Task 1: Insert data
 
 You use the **INSERT** statement to insert data into a table.
 
@@ -120,7 +118,7 @@ You use the **INSERT** statement to insert data into a table.
 1. Run the code and review the results, which should affect 1 row.
 1. Switch to the query pane containing the **SELECT** query and run it to validate that a new row has been inserted with the specific **CallID** value you specified in the **INSERT** statement (9).
 
-## Update data
+## Task 2: Update data
 
 To modify existing rows in a table, use the **UPDATE** statement.
 
@@ -156,7 +154,7 @@ To modify existing rows in a table, use the **UPDATE** statement.
 8. Run the **UPDATE** statement and note the number of rows affected.
 9. Switch to the query pane containing the **SELECT** query and run it. Note that the table has been updated using the values returned by the **SELECT** statement.
 
-## Delete data
+## Task 3: Delete data
 
 To delete rows in the table, you generally use the **DELETE** statement; though you can also remove all rows from a table by using the **TRUNCATE TABLE** statement.
 

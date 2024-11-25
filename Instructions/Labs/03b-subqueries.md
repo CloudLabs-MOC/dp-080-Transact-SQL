@@ -1,16 +1,13 @@
----
-lab:
-    title: 'Use Subqueries'
-    module: 'Module 3: Using Joins and Subqueries'
----
+# Lab 03b: Use Subqueries
+### Estimated Duration: 30 minutes
+In this Lab, you'll use subqueries to retrieve data from tables in the **adventureworks** database.
 
-# Use Subqueries
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Use simple subqueries
+- Task 2: Use correlated subqueries
 
-In this exercise, you'll use subqueries to retrieve data from tables in the **adventureworks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Use simple subqueries
+## Task 1: Use simple subqueries
 
 A subquery is a query that is nested within another query. The subquery is often referred to as the *inner* query, and the query within which it is nested is referred to as the *outer* query.
 
@@ -67,7 +64,7 @@ A subquery is a query that is nested within another query. The subquery is often
 
 1. Run the query and note that it returns the same results. Often you can achieve the same outcome with a subquery or a join, and often a subquery approach can be more easily interpreted by a developer looking at the code than a complex join query because the operation can be broken down into discrete components. In most cases, the performance of equivalent join or subquery operations is similar, but in some cases where existence checks need to be performed, joins perform better.
 
-## Use correlated subqueries
+## Task 2: Use correlated subqueries
 
 So far, the subqueries we've used have been independent of the outer query. In some cases, you might need to use an inner subquery that references a value in the outer query. Conceptually, the inner query runs once for each row returned by the outer query (which is why correlated subqueries are sometimes referred to as *repeating subqueries*).
 

@@ -1,16 +1,16 @@
----
-lab:
-    title: 'Use Built-in Functions'
-    module: 'Module 4: Using Built-in Functions'
----
+# Lab 04: Use Built-in Functions
+### Estimated Duration: 30 minutes
+In this Lab, you'll use built-in functions to retrieve and aggregate data in the **Adventureworks** database.
 
-# Use Built-in Functions
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Scalar functions
+- Task 2: Use logical functions
+- Task 3: Use aggregate functions
+- Task 4: Group aggregated results with the GROUP BY clause
+- Task 5: Filter groups with the HAVING clause
 
-In this exercise, you'll use built-in functions to retrieve and aggregate data in the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Scalar functions
+## Task 1: Scalar functions
 
 Transact-SQL provides a large number of functions that you can use to extract additional information from your data. Most of these functions are *scalar* functions that return a single value based on one or more input parameters, often a data field.
 
@@ -79,7 +79,7 @@ Transact-SQL provides a large number of functions that you can use to extract ad
 
         ![](../media/19.png)
 
-## Use logical functions
+## Task 2: Use logical functions
 
 *Logical* functions are used to apply logical tests to values, and return an appropriate value based on the results of the logical evaluation.
 
@@ -115,7 +115,7 @@ Transact-SQL provides a large number of functions that you can use to extract ad
 
     ![](../media/20.png)
 
-## Use aggregate functions
+## Task 3: Use aggregate functions
 
 *Aggregate* functions return an aggregated value, such as a sum, count, average, minimum, or maximum.
 
@@ -144,7 +144,7 @@ Transact-SQL provides a large number of functions that you can use to extract ad
 
 4. Run the query, noting that it returns the number of models and the average price for products with category names that end in "bikes".
 
-## Group aggregated results with the GROUP BY clause
+## Task 4: Group aggregated results with the GROUP BY clause
 
 Aggregate functions are especially useful when combined with the **GROUP BY** clause to calculate aggregations for different groups of data.
 
@@ -185,7 +185,7 @@ Aggregate functions are especially useful when combined with the **GROUP BY** cl
 
     ![](../media/21.png)
 
-## Filter groups with the HAVING clause
+## Task 5: Filter groups with the HAVING clause
 
 After grouping data, you may want to filter the results to include only the groups that meet specified criteria. For example, you may want to return only salespeople with more than 100 customers.
 

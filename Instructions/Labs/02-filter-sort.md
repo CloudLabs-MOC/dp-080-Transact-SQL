@@ -1,16 +1,16 @@
----
-lab:
-    title: 'Sort and Filter Query Results'
-    module: 'Module 2: Sorting and Filtering Query Results'
----
+# Lab 02: Sort and Filter Query Results
+### Estimated Duration: 30 minutes
+In this Lab, you'll use the Transact-SQL **SELECT** statement to query and filter data in the **AdventureWorks** database.
 
-# Sort and Filter Query Results
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Sort results using the ORDER BY clause
+- Task 2: Restrict results using TOP
+- Task 3: Retrieve pages of results with OFFSET and FETCH
+- Task 4: Use the ALL and DISTINCT options
+- Task 5: Filter results with the WHERE clause
 
-In this exercise, you'll use the Transact-SQL **SELECT** statement to query and filter data in the **AdventureWorks** database.
-
-> **Note**: This exercise assumes you have created the sample **AdventureWorks** database.
-
-## Sort results using the ORDER BY clause
+## Task 1: Sort results using the ORDER BY clause
 
 It's often useful to sort query results into a particular order.
 
@@ -62,7 +62,7 @@ It's often useful to sort query results into a particular order.
 
     ![](../media/6.png)
 
-## Restrict results using TOP
+## Task 2: Restrict results using TOP
 
 Sometimes you only want to return a specific number of rows. For example, you might want to find the twenty most expensive products.
 
@@ -96,7 +96,7 @@ Sometimes you only want to return a specific number of rows. For example, you mi
 
     ![](../media/7.png)
 
-## Retrieve pages of results with OFFSET and FETCH
+## Task 3: Retrieve pages of results with OFFSET and FETCH
 
 User interfaces and reports often present large volumes of data as pages, you make them easier to navigate on a screen.
 
@@ -117,7 +117,7 @@ User interfaces and reports often present large volumes of data as pages, you ma
     ORDER BY Name OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
     ```
 
-## Use the ALL and DISTINCT options
+## Task 4: Use the ALL and DISTINCT options
 
 Often, multiple rows in a table may contain the same values for a given subset of fields. For example, a table of products might contain a **Color** field that identifies the color of a given product. It's not unreasonable to assume that there may be multiple products of the same color. Similarly, the table might contain a **Size** field; and again it's not unreasonable to assume that there may be multiple products of the same size; or even multiple products with the same combination of size and color.
 
@@ -161,7 +161,7 @@ Often, multiple rows in a table may contain the same values for a given subset o
 
 8. Run the modified query and note that it returns each unique combination of color and size.
 
-## Filter results with the WHERE clause
+## Task 5: Filter results with the WHERE clause
 
 Most queries for application development or reporting involve filtering the data to match specified criteria. You typically apply filtering criteria as a predicate in a **WHERE** clause of a query.
 

@@ -1,16 +1,14 @@
----
-lab:
-    title: 'Create queries with table expressions'
-    module: 'Additional exercises'
----
+# Lab 06: Create queries with table expressions
+### Estimated Duration: 30 minutes
+In this Lab, you'll use table expressions to query the **Adventureworks** database.
 
-# Create queries with table expressions
+### Lab objectives
+In this lab, you will complete the following tasks:
+- Task 1: Create a view
+- Task 2: Query a view
+- Task 3: Use a derived table
 
-In this exercise, you'll use table expressions to query the **Adventureworks** database.
-
-> **Note**: This exercise assumes you have created the **Adventureworks** database.
-
-## Create a view
+## Task 1: Create a view
 
 A view is a predefined query that you can query like a table.
 
@@ -36,7 +34,7 @@ A view is a predefined query that you can query like a table.
 
 1. This code creates a view called **vProductsRoadBikes** for all road bikes. Run the code and create the view.
 
-## Query a view
+## Task 2: Query a view
 
 You've created your view. Now you can use it. For example, you can use your view to get a list of any road bikes based on their **ListPrice**.
 
@@ -51,7 +49,7 @@ You've created your view. Now you can use it. For example, you can use your view
 1. Run the query and review the results. You've queried your view and retrieved a list of any road bikes that have a **ListPrice** under 1000. Your query uses your view as a source for the data. This means your applications can use your view for specific searches like this, and won't need to query the underlying table to fetch the data they need.
     ![](../media/28.png)
 
-## Use a derived table
+## Task 3: Use a derived table
 
 Sometimes you might end up having to rely on complex queries. You can use derived tables in place of those complex queries to avoid adding to their complexity.
 
