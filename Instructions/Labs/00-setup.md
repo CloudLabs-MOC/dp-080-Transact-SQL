@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Lab Environment Setup - Azure SQL Database'
-    module: 'Setup'
----
-
 # Lab Environment Setup
 
 You can complete the Transact-SQL exercises in a sample database in Microsoft Azure SQL Database. Use the instructions in this page to prepare a suitable Azure SQL Database environment.
@@ -26,7 +20,7 @@ In this task, you will learn how to use Azure portal to create a single database
 
 #### Steps
 
-1. Login into Azure portal and on the search box type SQL database, then please select the **SQL database** option from the list.
+1. Login into Azure portal and on the search box type SQL database (1), then please select the **SQL database (2)** option from the list.
 
    ![image](../media/Nimage-38.png)
 
@@ -40,74 +34,77 @@ In this task, you will learn how to use Azure portal to create a single database
     | Settings | Values |
     |  -- | -- |
     | Subscription | *Leave default subscription* |
-    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>(1)** from the dropdown list |
-    | Database name | Enter **Adventureworks(2)** |
+    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/> (1)** from the dropdown list |
+    | Database name | Enter **Adventureworks (2)** |
    
     ![image](../media/set1n.png) 
 
-4. For server, click **Create new(3)**.
+4. For server, click **Create new (3)**.
 
 5. On **Create SQL Database Server** page, please enter the following details and click on **Ok**
 
     | Settings | Values |
     |  -- | -- |      
-    | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/>** |
-    | Location | **East US** |
-    | Authentication method | **Use Microsoft Entra-only authentication** |
-    | Select Microsoft Entra admin | click on **Set admin** and select **<inject key="AzureAdUserEmail"></inject>** from the list** |
+    | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/> (1)** |
+    | Location | **East US (2)** |
+    | Authentication method | **Use Microsoft Entra-only authentication (3)** |
+    | Select Microsoft Entra admin | click on **Set admin (4)** and select **<inject key="AzureAdUserEmail"></inject>** from the list** |
     
+
     ![image](../media/set2n.png)   
 
     ![image](../media/set3n.png)  
 
     ![image](../media/set4n.png)  
 
-6. After creating the database server, please enter the following and click on **Next : Networking >**
+7. After creating the database server, please enter the following and click on **Next : Networking >**
 
     | Settings | Values |
     |  -- | -- |      
-    | Want to use SQL elastic pool? | **No** |    |
-    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 2 vCores, 32 GB storage, zone redundant disabled)** is selected using configure database option   |
-    | Backup storage redundancy |  **Local redundant backup storage** |
+    | Want to use SQL elastic pool? | **No (1)** |    |
+    | WorkLoad Environment | **Development (2)** |    |
+    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 2 vCores, 32 GB storage, zone redundant disabled) (3)** is selected using configure database option   |
+    | Backup storage redundancy |  **Locally - redundant backup storage** |
     
+
     ![image](../media/set5n.png)
  
-7. On the **Networking** tab, modify the below settings as below
+9. On the **Networking** tab, modify the following settings as mentioned below.
    
     | Settings | Values |
     |----------|--------|
-    |Connectivity method | **Public endpoint** |
-    |Allow Azure services and resources to access this server | **Yes** |
-    | Add current client IP address | **Yes**  |
-    | Connection policy | **Default** |
-    | Minimum TLS version | **TLS 1.2** |
+    |Connectivity method | **Public endpoint (1)** |
+    |Allow Azure services and resources to access this server | **Yes (2)** |
+    | Add current client IP address | **Yes (3)**  |
+    | Connection policy | **Default (4)** |
+    | Minimum TLS version | **TLS 1.2 (5)** |
 
     ![image](../media/set6n.png)
 
     ![image](../media/set7n.png)
 
-8. Select **Next: Security** at the bottom of the page, modify the below settings as below
+10. Click on **Next: Security** at the bottom of the page and update the following settings as mentioned below.
 
    | Settings | Values |
    |----------|--------|
-   | Enable Microsoft Defender for SQL | **Not now** |
-   | Ledger | **Not configured**  |
-   | Server identity | **Not enabled** |
-   | Server level key | **Service-managed key selected** |
-   | Database level key | **Not configured** |
-   | Enable secure enclaves | **Off** |
+   | Enable Microsoft Defender for SQL | **Not now (1)** |
+   | Ledger | **Not configured (2)**  |
+   | Server identity | **Not enabled (3)** |
+   | Server level key | **Service-managed key selected(4)** |
+   | Database level key | **Not configured (5)** |
+   | Enable secure enclaves | **Off (6)** |
 
-9. Select **Next: Additional settings** at the bottom of the page.
+11. Select **Next: Additional settings >** at the bottom of the page.
 
-10. On the **Additional settings** tab, in the **Data source** section, select **Sample** for Use existing data and click **Ok** on the **AdventureWorksLT** dialogue box. Instead of an empty blank database, this creates an AdventureWorksLT sample database with tables and data to query and experiment with.
+12. On the **Additional settings** tab, in the **Data source** section, select **Sample (1)** for Use existing data and click **Ok (2)** on the **AdventureWorksLT** dialogue box. Instead of an empty blank database, this creates an AdventureWorksLT sample database with tables and data to query and experiment with.
 
     ![image](../media/Nimage-42.png)
 
-11. After selecting AdventureWorksLT sample database, please select **Review + Create**.
+13. After selecting AdventureWorksLT sample database, please select **Review + Create**.
 
-12. After validation is completed successfully, please select **Create**.
+14. After validation is completed successfully, please select **Create**.
  
-13. Once the deployment is complete, please select **Go to Resource**.
+15. Once the deployment is complete, please select **Go to Resource**.
 
 ## Open the query editor
 

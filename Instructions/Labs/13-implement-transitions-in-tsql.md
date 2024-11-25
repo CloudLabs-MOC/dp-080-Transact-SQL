@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Implement transactions with Transact SQL'
-    module: 'Additional exercises'
----
-
 # Implement transactions with Transact SQL
 
 In this exercise, you'll use transactions to enforce data integrity in the **AdventureWorks** database.
@@ -151,7 +145,7 @@ Lower level errors can require that you explicitly handle the error and rollback
 1. Run the code and review the results and messages.
 1. Switch back to the query containing the SELECT customer statement and run the query to see if the *Norman Newcustomer* row was added.
 
-    Note that the most recently modified customer record is <u>not</u> for *Norman Newcustomer* - the INSERT statement that succeeded has been rolled back to ensure the database remains consistent.
+   **Note:** The most recently modified customer record is <u>not</u> for *Norman Newcustomer* - the INSERT statement that succeeded has been rolled back to ensure the database remains consistent.
 
 ## Check the transaction state before rolling back
 
