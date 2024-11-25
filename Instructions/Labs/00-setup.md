@@ -92,7 +92,7 @@ In this task, you will learn how to use Azure portal to create a single database
    |----------|--------|
    | Enable Microsoft Defender for SQL | **Not now** |
    | Ledger | **Not configured**  |
-   | Server identity | **Not configured** |
+   | Server identity | **Not enabled** |
    | Server level key | **Service-managed key selected** |
    | Database level key | **Not configured** |
    | Enable secure enclaves | **Off** |
