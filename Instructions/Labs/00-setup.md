@@ -1,62 +1,133 @@
 ---
 lab:
-    title: 'Lab Environment Setup - Local SQL Server'
+    title: 'Lab Environment Setup - Azure SQL Database'
     module: 'Setup'
 ---
 
 # Lab Environment Setup
 
-> **Note**: The following information provides a guide for what you need to install if you want to try the labs using SQL Server on your own computer. However, please note that these guidelines are provided as-is with no warranty. Due to the variability of operating system configuration and additionally installed software, Microsoft cannot provide support for your own lab environment.
+You can complete the Transact-SQL exercises in a sample database in Microsoft Azure SQL Database. Use the instructions in this page to prepare a suitable Azure SQL Database environment.
 
-## Base Operating System
+> **Note**: You will need a [Microsoft Azure subscription](https://azure.microsoft.com/free) in which you have sufficient permissions to create and configure the required resources.
 
-The setup for these labs has been tested on Microsoft Windows 11 with the latest updates applied as of April 8th 2024.
+## Exercise 1: Deploy an Azure SQL database
 
-The required software for the labs can also be installed on Linux and Apple Mac computers, but this configuration has not been tested.
+Azure SQL Database is a fully managed platform as a service (PaaS) database engine that handles most database management functions like upgrading, patching, backups, and monitoring without the need for user intervention. Azure SQL Database is always running on the most recent stable version of the SQL Server database engine and a patched operating system, with 99.99% uptime. In this exercise, you are going to deploy an Azure SQL database. 
 
-## Microsoft SQL Server Express 2022
+In this exercise, you will perform the following task:
 
-1. Download Microsoft SQL Server Express 2022 from [the Microsoft download center](https://www.microsoft.com/en-us/download/details.aspx?id=104781).
-2. Run the downloaded installer and select the **Basic** installation option.
++ Task 1: Create an Azure SQL database with Adventure Works pre-loaded.
 
-## Microsoft Azure Data Studio
+### Estimated Timing: 20 minutes
 
-1. Download and install Azure Data Studio from the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), following the appropriate instructions for your operating system.
+### Task 1: Create an Azure SQL database with Adventure Works pre-loaded
 
-## AdventureWorks LT Database
+In this task, you will learn how to use Azure portal to create a single database with Adventure works sample database
 
-The labs use a lightweight version of the AdventureWorks sample database. Note that this is <u>not</u> the same as the official sample database, so use the following instructions to create it.
+#### Steps
 
-1. Download the **[adventureworkslt.sql](../../Scripts/adventureworkslt.sql)** script, and save it on your local computer.
-2. Start Azure Data Studio, and open the **adventureworkslt.sql** script file you downloaded.
-3. In the script pane, connect to your SQL Server Express server server using the following information:
-    - **Connection type**: SQL Server
-    - **Server**: localhost\SQLExpress
-    - **Authentication Type**: Windows Authentication
-    - **Database**: master
-    - **Server group**: &lt;Default&gt;
-    - **Name**: *leave blank*
-4. Ensure the **master** database is selected, and then run the script to create the **adventureworks** database. This will take a few minutes.
-5. After the database has been created, on the **Connections** pane, in the **Servers** section, create a new connection with the following settings:
-    - **Connection type**: SQL Server
-    - **Server**: localhost\SQLExpress
-    - **Authentication Type**: Windows Authentication
-    - **Database**: adventureworks
-    - **Server group**: &lt;Default&gt;
-    - **Name**: AdventureWorks
+1. Login into Azure portal and on the search box type SQL database, then please select the **SQL database** option from the list.
 
-## Explore the *AdventureWorks* database
+   ![image](../media/Nimage-38.png)
 
-We'll use the **AdventureWorks** database in this lab, so let's start by exploring it in Azure Data Studio.
+2. Please select the **+ Create** button.
 
-1. Start Azure Data Studio if it's not already started, and in the **Connections** tab, select the **AdventureWorks** connection by clicking on the arrow just to the left of the name. This will connect to the SQL Server instance and show the objects in the **AdventureWorks** database.
-2. Expand the **Tables** folder to see the tables that are defined in the database. Note that there are a few tables in the **dbo** schema, but most of the tables are defined in a schema named **SalesLT**.
-3. Expand the **SalesLT.Product** table and then expand its **Columns** folder to see the columns in this table. Each column has a name, a data type, an indication of whether it can contain *null* values, and in some cases an indication that the columns is used as a primary key (PK) or foreign key (FK).
-4. Right-click the **SalesLT.Product** table and use the **SELECT TOP (1000)** option to create and run a new query script that retrieves the first 1000 rows from the table.
-5. Review the query results, which consist of 1000 rows - each row representing a product that is sold by the fictitious *Adventure Works Cycles* company.
-6. Close the **SQLQuery_1** pane that contains the query and its results.
-7. Explore the other tables in the database, which contain information about product details, customers, and sales orders. The tables are related through primary and foreign keys, as shown here (you may need to resize the pane to see them clearly):
+   ![image](../media/Nimage-39.png)
 
-    ![An entity relationship diagram of the AdventureWorks database](./images/adventureworks-erd.png)
 
-> **Note**: If you're familiar with the standard **AdventureWorks** sample database, you may notice that in this lab we are using a simplified version that makes it easier to focus on learning Transact-SQL syntax.
+3. Under **Basic** tab, please enter the following details:
+
+    | Settings | Values |
+    |  -- | -- |
+    | Subscription | *Leave default subscription* |
+    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>(1)** from the dropdown list** |
+    | Database name | Enter **Adventureworks(2)** |
+   
+    ![image](../media/set1n.png) 
+
+4. For server, click **Create new(3)**.
+
+5. On **Create SQL Database Server** page, please enter the following details and click on **Ok**
+
+    | Settings | Values |
+    |  -- | -- |      
+    | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/>** |
+    | Location | **East US** |
+    | Authentication method | **Use Microsoft Entra-only authentication** |
+    | Select Microsoft Entra admin | click on **Set admin** and select **<inject key="AzureAdUserEmail"></inject>** from the list** |
+    
+    ![image](../media/set2n.png)   
+
+    ![image](../media/set3n.png)  
+
+    ![image](../media/set4n.png)  
+
+6. After creating the database server, please enter the following and click on **Next : Networking >**
+
+    | Settings | Values |
+    |  -- | -- |      
+    | Want to use SQL elastic pool? | **No** |    |
+    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 2 vCores, 32 GB storage, zone redundant disabled)** is selected using configure database option   |
+    | Backup storage redundancy |  **Local redundant backup storage** |
+    
+    ![image](../media/set5n.png)
+ 
+7. On the **Networking** tab, modify the below settings as below
+   
+    | Settings | Values |
+    |----------|--------|
+    |Connectivity method | **Public endpoint** |
+    |Allow Azure services and resources to access this server | **Yes** |
+    | Add current client IP address | **Yes**  |
+    | Connection policy | **Default** |
+    | Minimum TLS version | **TLS 1.2** |
+
+    ![image](../media/set6n.png)
+
+    ![image](../media/set7n.png)
+
+8. Select **Next: Security** at the bottom of the page, modify the below settings as below
+
+   | Settings | Values |
+   |----------|--------|
+   | Enable Microsoft Defender for SQL | **Not now** |
+   | Ledger | **Not configured**  |
+   | Server identity | **Not configured** |
+   | Server level key | **Service-managed key selected** |
+   | Database level key | **Not configured** |
+   | Enable secure enclaves | **Off** |
+
+9. Select **Next: Additional settings** at the bottom of the page.
+
+10. On the **Additional settings** tab, in the **Data source** section, select **Sample** for Use existing data and click **Ok** on the **AdventureWorksLT** dialogue box. Instead of an empty blank database, this creates an AdventureWorksLT sample database with tables and data to query and experiment with.
+
+    ![image](../media/Nimage-42.png)
+
+11. After selecting AdventureWorksLT sample database, please select **Review + Create**.
+
+12. After validation is completed successfully, please select **Create**.
+ 
+13. Once the deployment is complete, please select **Go to Resource**.
+
+## Open the query editor
+
+The query editor is a browser-based interface that you can use to run Transact-SQL statements in your database.
+
+1. In the Azure portal, on the page for your **Adventureworks** SQL Database, in the pane on the left, select **Query editor**.
+1. On the welcome page, sign into your database using Entra authentication (if necessary, allow access from your client IP address first).
+1. In the query editor, expand the **Tables** folder to view the tables in the database.
+
+    > **Note**: If you're familiar with the standard **AdventureWorks** sample database for Microsoft SQL Server, you may notice that we are using a simplified, lightweight (*LT*) version with fewer tables.
+
+1. In the **Query 1** pane, enter the following Transact-SQL code:
+
+    ```sql
+    SELECT * FROM SalesLT.Product;
+    ```
+
+1. Use the **&#9655; Run** button to run the query, and and after a few seconds, review the results, which includes all columns for all products.
+1. Close the Query editor page, discarding your changes if prompted.
+
+Now that you've created the database and learned how to use the query editor to run Transact-SQL code, you can return to the query editor in the Azure Portal at any time to complete the lab exercises.
+
+
