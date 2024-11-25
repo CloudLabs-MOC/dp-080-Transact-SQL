@@ -48,7 +48,7 @@ In this task, you will learn how to use Azure portal to create a single database
     | Server name | **sqlserver<inject key="DeploymentID" enableCopy="false"/> (1)** |
     | Location | **East US (2)** |
     | Authentication method | **Use Microsoft Entra-only authentication (3)** |
-    | Select Microsoft Entra admin | click on **Set admin (4)** and select **<inject key="AzureAdUserEmail"></inject>** from the list** |
+    | Select Microsoft Entra admin | click on **Set admin (4)** and select **<inject key="AzureAdUserEmail"></inject>** from the list |
     
 
     ![image](../media/set2n.png)   
@@ -85,14 +85,14 @@ In this task, you will learn how to use Azure portal to create a single database
 
 10. Click on **Next: Security** at the bottom of the page and update the following settings as mentioned below.
 
-   | Settings | Values |
-   |----------|--------|
-   | Enable Microsoft Defender for SQL | **Not now (1)** |
-   | Ledger | **Not configured (2)**  |
-   | Server identity | **Not enabled (3)** |
-   | Server level key | **Service-managed key selected(4)** |
-   | Database level key | **Not configured (5)** |
-   | Enable secure enclaves | **Off (6)** |
+    | Settings | Values |
+    |----------|--------|
+    | Enable Microsoft Defender for SQL | **Not now (1)** |
+    | Ledger | **Not configured (2)**  |
+    | Server identity | **Not enabled (3)** |
+    | Server level key | **Service-managed key selected(4)** |
+    | Database level key | **Not configured (5)** |
+    | Enable secure enclaves | **Off (6)** |
 
 11. Select **Next: Additional settings >** at the bottom of the page.
 
