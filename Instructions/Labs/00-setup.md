@@ -40,7 +40,7 @@ In this task, you will learn how to use Azure portal to create a single database
     | Settings | Values |
     |  -- | -- |
     | Subscription | *Leave default subscription* |
-    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>(1)** from the dropdown list** |
+    | Resource group | Select the resource group name **dp080-<inject key="DeploymentID" enableCopy="false"/>(1)** from the dropdown list |
     | Database name | Enter **Adventureworks(2)** |
    
     ![image](../media/set1n.png) 
