@@ -267,6 +267,7 @@ Most queries for application development or reporting involve filtering the data
     ```
 
     ![](../media/11.png)
+    
 ## Challenges
 
 Now that you've seen some examples of filtering and sorting data, it's your chance to put what you've learned into practice.

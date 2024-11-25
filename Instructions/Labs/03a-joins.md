@@ -26,8 +26,6 @@ An inner join is used to find related data in two tables. For example, suppose y
 
 1. Run the query, and after a few seconds, review the results, which include the **ProductName** from the products table and the corresponding **Category** from the product category table. Because the query uses an **INNER** join, any products that do not have corresponding categories, and any categories that contain no products are omitted from the results.
 
-    ![](../media/12.png)
-
 1. Modify the query as follows to remove the **INNER** keyword, and re-run it.
 
     ```sql
