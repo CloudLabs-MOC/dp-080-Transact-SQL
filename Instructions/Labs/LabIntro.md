@@ -1,21 +1,5 @@
-# 
-
-### Overall Estimated Duration: 
-
-## Overview
-
-## Objective
-
-## Pre-requisites
-
-## Architecture
-
-## Architecture Diagram
-
-## Explanation of Components
-
 ## Getting Started with the Lab
- 
+
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
