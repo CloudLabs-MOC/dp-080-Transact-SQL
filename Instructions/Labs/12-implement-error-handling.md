@@ -1,9 +1,3 @@
----
-lab:
-    title: 'Implement error handling with Transact-SQL'
-    module: 'Additional exercises'
----
-
 # Implement error handling with Transact-SQL
 
 In this exercise, you'll use various Transact-SQL error handling techniques.
@@ -47,7 +41,7 @@ The Adventureworks database contains details of products, including their size. 
     ```
 
 1. Run the modified test code and review the output messages. An error occurs, causing query execution to stop.
-    ![](../media/44.png)
+    
 
 ## Use TRY/CATCH to handle an error
 
@@ -79,8 +73,9 @@ Transact-SQL supports structured exception handling through the use of a TRY/CAT
     EXECUTE SalesLT.up_GetProductSizeInInches 710, @SizeInInches OUTPUT;
     SELECT @SizeInInches;
     ```
-
 1. Review the results, which show the size as *0*. Then review the output messages and note that they include a notification that an error occurred. The code in the CATCH block has handled the error and enabled the stored procedure to fail gracefully.
+
+   ![](../media/44.png)
 
 ## Capture error details
 
