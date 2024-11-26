@@ -1,4 +1,4 @@
-## Getting Started with the Lab
+# Getting Started with the Lab
 
 ## Accessing Your Lab Environment
  
