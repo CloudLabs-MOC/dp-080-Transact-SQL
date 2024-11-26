@@ -127,4 +127,4 @@ The query editor is a browser-based interface that you can use to run Transact-S
 
 Now that you've created the database and learned how to use the query editor to run Transact-SQL code, you can return to the query editor in the Azure Portal at any time to complete the lab exercises.
 
-
+##  You have successfully completed this lab, please click on next
