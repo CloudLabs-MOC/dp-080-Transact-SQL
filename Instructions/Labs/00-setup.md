@@ -63,7 +63,7 @@ In this task, you will learn how to use Azure portal to create a single database
     |  -- | -- |      
     | Want to use SQL elastic pool? | **No (1)** |    |
     | WorkLoad Environment | **Development (2)** |    |
-    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 2 vCores, 32 GB storage, zone redundant disabled) (3)** is selected using configure database option   |
+    | Compute + storage | Make sure **General Purpose (Standard-series (Gen5), 1 vCores, 32 GB storage, zone redundant disabled) (3)** is selected using configure database option   |
     | Backup storage redundancy |  **Locally - redundant backup storage** |
     
 
