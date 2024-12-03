@@ -310,3 +310,4 @@ This section contains suggested solutions for the challenge queries.
          FROM SalesLT.ProductCategory
          WHERE Name = 'Bells and Horns');
     ```
+## You have successfully completed the lab.

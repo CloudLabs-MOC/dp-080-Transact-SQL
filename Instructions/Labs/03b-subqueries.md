@@ -196,3 +196,4 @@ This section contains suggested solutions for the challenge queries.
          WHERE p.ProductID = od.ProductID)
     ORDER BY p.ProductID;
     ```
+## You have successfully completed the lab.

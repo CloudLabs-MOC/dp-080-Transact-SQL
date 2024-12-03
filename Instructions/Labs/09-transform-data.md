@@ -182,3 +182,4 @@ SELECT Product, SalesPerson, SUM(TotalDue) AS TotalSales
 FROM SalesLT.v_ProductSales
 GROUP BY ROLLUP (Product, SalesPerson);
 ```
+## You have successfully completed the lab.

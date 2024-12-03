@@ -158,3 +158,4 @@ This section contains suggested solutions for the challenge queries.
         ) AS DerivedTable
     WHERE DerivedTable.WeightType = N'Heavy' AND DerivedTable.ListPrice > 2000;
     ```
+## You have successfully completed the lab.

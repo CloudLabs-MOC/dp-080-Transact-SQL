@@ -274,3 +274,4 @@ This section contains suggested solutions for the challenge queries.
         ON prd.ProductCategoryID = cat.ProductCategoryID
     ORDER BY ParentCategory, SubCategory, ProductName;
     ```
+## You have successfully completed the lab.

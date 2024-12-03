@@ -222,3 +222,4 @@ CROSS APPLY SalesLT.fn_SubCategories(c.ProductCategoryID) AS sc
 ORDER BY Category, SubCategory;
 ```
 
+## You have successfully completed the lab.

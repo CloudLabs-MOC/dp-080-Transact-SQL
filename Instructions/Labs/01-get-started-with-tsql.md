@@ -322,3 +322,4 @@ This section contains suggested solutions for the challenge queries.
         END AS ShippingStatus
     FROM SalesLT.SalesOrderHeader;
     ```
+## You have successfully completed the lab.

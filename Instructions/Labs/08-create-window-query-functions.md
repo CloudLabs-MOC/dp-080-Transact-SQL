@@ -96,3 +96,4 @@ JOIN SalesLT.Address AS a
     ON ca.AddressID = a.AddressID
 WHERE ca.AddressType = 'Main Office';
 ```
+## You have successfully completed the lab.

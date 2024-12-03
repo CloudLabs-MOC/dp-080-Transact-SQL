@@ -165,3 +165,4 @@ SELECT c.CustomerID, c.CompanyName, a.*
     CROSS APPLY SalesLT.fn_CustomerAddresses(c.CustomerID) AS a
 ORDER BY c.CustomerID;
 ```
+## You have successfully completed the lab.

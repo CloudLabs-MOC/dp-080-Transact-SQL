@@ -351,3 +351,4 @@ This section contains suggested solutions for the challenge queries.
     FROM SalesLT.Product
     WHERE ProductNumber LIKE 'BK-[^R]%-[0-9][0-9]';
     ```
+## You have successfully completed the lab.

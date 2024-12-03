@@ -350,3 +350,4 @@ BEGIN CATCH
   END;
 END CATCH
 ```
+## You have successfully completed the lab.

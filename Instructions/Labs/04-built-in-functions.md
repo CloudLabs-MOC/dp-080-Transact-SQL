@@ -316,3 +316,4 @@ The product manager would like reports that include aggregated information about
     HAVING SUM(o.OrderQty) > 20
     ORDER BY TotalSales DESC;
     ```
+## You have successfully completed the lab.
