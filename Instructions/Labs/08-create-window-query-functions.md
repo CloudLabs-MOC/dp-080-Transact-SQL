@@ -11,7 +11,24 @@ In this lab, you will complete the following tasks:
 
 Let's start by creating a query that uses a window function to return a ranking value.
 
-1. Open a query editor for your **Adventureworks** database, and create a new query.
+1. In the Azure portal, Search for **SQL Databases(1)**, and click on **SQL Databases(2)**.
+
+    ![](../media/111.png)
+1. On the page for your **Adventureworks** SQL Database, in the pane on the left, select **Query editor(preview)**(1).
+
+    ![](../media/112.png)
+
+1. On the welcome page, sign into your database using SQL server authentication using the following credentials: 
+    - Login : SQLUser
+    - Password : MyAdminPassword123! 
+
+1. Click on OK.
+
+    ![](../media/113.png)
+
+1. Click on Allowlist IP XXX.XXX.XXX.XXX on server sqlserver<inject key="DeploymentID" enableCopy="false" /></inject> and then click on OK again.
+
+    ![](../media/114.png)
 1. In the query editor, enter the following code:
 
     ```sql
