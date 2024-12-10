@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/dp-080-Transact-SQL/tree/prod-v1",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod-v1/Instructions/Labs/LabIntro.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/dp-080-Transact-SQL/prod-v1/Instructions/Labs/getting-started/LabIntro-m10.md",
         "Order": 1
       },
       {
